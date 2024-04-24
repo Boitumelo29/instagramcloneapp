@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:instagramcloneapp/features/user/auth/auth_screen.dart';
 
-void main() {
+void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+// await Firebase.intiltialisedApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
