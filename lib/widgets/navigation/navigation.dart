@@ -7,6 +7,8 @@ class NavigationScreen extends StatefulWidget {
   State<NavigationScreen> createState() => _NavigationScreenState();
 }
 
+int _currentIndex = 0;
+
 class _NavigationScreenState extends State<NavigationScreen> {
   late PageController pageController;
 
@@ -20,16 +22,50 @@ class _NavigationScreenState extends State<NavigationScreen> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
+    pageController.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        child: BottomNavigationBar(items: [
-          //stopped at 2:04
-        ]),
+        color: Colors.red,
+        child: BottomNavigationBar(
+            currentIndex: _currentIndex,
+            onTap: navigationTapped,
+            items: const [
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.home,
+                  ),
+                  label: "Home"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.search,
+                  ),
+                  label: "Search"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.camera_enhance,
+                  ),
+                  label: "Reels"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.person,
+                  ),
+                  label: "Profile")
+            ]),
       ),
     );
+  }
+
+  onPageChanged(int page) {
+    setState(() {
+      _currentIndex = page;
+    });
+  }
+
+  navigationTapped(int page) {
+    pageController.jumpToPage(page);
   }
 }

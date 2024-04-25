@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:instagramcloneapp/features/main/homs_screen/home_screen.dart';
 import 'package:instagramcloneapp/features/user/auth/auth_screen.dart';
 
 void main() async {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
         home: const ScreenUtilInit(
           designSize: Size(375, 812),
-          child: AuthPage(),
+          child: HomeScreen(),
         ));
   }
 }
