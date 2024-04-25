@@ -29,9 +29,12 @@ class _NavigationScreenState extends State<NavigationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        color: Colors.red,
+        color: Colors.white,
         child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
             currentIndex: _currentIndex,
+            selectedItemColor: Colors.black,
+            unselectedItemColor: Colors.grey,
             onTap: navigationTapped,
             items: const [
               BottomNavigationBarItem(
@@ -55,6 +58,10 @@ class _NavigationScreenState extends State<NavigationScreen> {
                   ),
                   label: "Profile")
             ]),
+      ),
+      body: PageView(
+        controller: pageController,
+        onPageChanged: onPageChanged,
       ),
     );
   }
