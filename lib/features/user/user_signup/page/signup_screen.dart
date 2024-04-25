@@ -91,7 +91,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(
                 height: 10.h,
               ),
-              const CustomButton(
+              CustomButton(
+                onTapped: () {},
                 title: "SignUp",
                 color: Colors.blue,
               ),
