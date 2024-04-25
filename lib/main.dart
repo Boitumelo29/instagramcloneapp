@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:instagramcloneapp/features/main/homs_screen/home_screen.dart';
+import 'package:instagramcloneapp/features/main/main_screen/main_screen.dart';
 import 'package:instagramcloneapp/features/user/auth/auth_screen.dart';
 import 'package:instagramcloneapp/widgets/navigation/navigation.dart';
 

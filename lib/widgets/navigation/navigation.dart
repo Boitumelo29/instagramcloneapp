@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:instagramcloneapp/features/explore/page/explore_screen.dart';
+import 'package:instagramcloneapp/features/home/page/home_screen.dart';
+import 'package:instagramcloneapp/features/reel/page/reel_screen.dart';
+import 'package:instagramcloneapp/features/user_profile/page/user_profile_screen.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
@@ -62,6 +66,12 @@ class _NavigationScreenState extends State<NavigationScreen> {
       body: PageView(
         controller: pageController,
         onPageChanged: onPageChanged,
+        children: const [
+          HomeScreen(),
+          ExploreScreen(),
+          ReelScreen(),
+          ProfileScreen()
+        ],
       ),
     );
   }

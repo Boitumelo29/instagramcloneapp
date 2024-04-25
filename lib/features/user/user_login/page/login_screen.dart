@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:instagramcloneapp/design/textfield/button/custom_button.dart';
-import 'package:instagramcloneapp/features/main/homs_screen/home_screen.dart';
+import 'package:instagramcloneapp/features/main/main_screen/main_screen.dart';
 import 'package:instagramcloneapp/features/user/user_login/widget/user_login_email.dart';
 import 'package:instagramcloneapp/features/user/user_login/widget/user_login_forgot_password.dart';
 import 'package:instagramcloneapp/features/user/user_login/widget/user_login_password.dart';
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onTapped: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                    MaterialPageRoute(builder: (context) => MainScreen()),
                   );
                 },
                 title: "Login",
