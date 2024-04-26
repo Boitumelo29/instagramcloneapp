@@ -4,6 +4,8 @@ import 'package:instagramcloneapp/features/main/main_screen/main_screen.dart';
 import 'package:instagramcloneapp/features/user/auth/auth_screen.dart';
 import 'package:instagramcloneapp/widgets/navigation/navigation.dart';
 
+import 'extra/buttone_ex.dart';
+
 void main() async {
 //   WidgetsFlutterBinding.ensureInitialized();
 // await Firebase.intiltialisedApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
           designSize: Size(375, 812),
 
           //go back to part 3 at 7:00 for how fix the navigation screen
-          child: NavigationScreen(),
+          child: MyHomePage(),
         ));
   }
 }
