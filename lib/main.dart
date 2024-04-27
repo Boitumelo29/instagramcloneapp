@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:instagramcloneapp/features/user/auth/auth_screen.dart';
+import 'package:instagramcloneapp/widgets/navigation/navigation.dart';
 
-void main() {
+void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+// await Firebase.intiltialisedApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -19,7 +21,9 @@ class MyApp extends StatelessWidget {
         ),
         home: const ScreenUtilInit(
           designSize: Size(375, 812),
-          child: AuthPage(),
+
+          //go back to part 3 at 7:00 for how fix the navigation screen
+          child: NavigationScreen(),
         ));
   }
 }
