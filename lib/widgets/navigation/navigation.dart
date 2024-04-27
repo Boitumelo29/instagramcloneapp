@@ -25,7 +25,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     pageController.dispose();
   }
