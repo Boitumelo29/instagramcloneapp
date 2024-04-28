@@ -12,7 +12,9 @@ class _ReelScreenState extends State<ReelScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Stack(),
+        child: Stack(
+          children: [Text("data")],
+        ),
       ),
     );
   }

@@ -12,7 +12,9 @@ class _PostScreenState extends State<PostScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Stack(),
+        child: Stack(
+          children: [Text("l")],
+        ),
       ),
     );
   }

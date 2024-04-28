@@ -4,6 +4,7 @@ import 'package:instagramcloneapp/features/home/page/home_screen.dart';
 import 'package:instagramcloneapp/features/post/page/post_screen.dart';
 import 'package:instagramcloneapp/features/reel/page/reel_screen.dart';
 import 'package:instagramcloneapp/features/user_profile/page/user_profile_screen.dart';
+import 'package:instagramcloneapp/widgets/add_screen/add_screen.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
@@ -74,7 +75,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
         children: const [
           HomeScreen(),
           ExploreScreen(),
-          PostScreen(),
+          PostScreenNavigation(),
           ReelScreen(),
           ProfileScreen()
         ],
