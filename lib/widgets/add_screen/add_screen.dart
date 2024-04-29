@@ -46,10 +46,13 @@ class _PostScreenNavigationState extends State<PostScreenNavigation> {
             PageView(
               controller: pageController,
               onPageChanged: onPageChanged,
-              children: const [ReelScreen(), PostScreen()],
+              children: const [
+                PostScreen(),
+                ReelScreen(),
+              ],
             ),
             AnimatedPositioned(
-              duration: const Duration(seconds: 3),
+              duration: const Duration(microseconds: 100),
               bottom: 10.h,
               right: _currentIndex == 0 ? 100.w : 150.w,
               child: Container(
@@ -64,7 +67,7 @@ class _PostScreenNavigationState extends State<PostScreenNavigation> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        navigationTapped(1);
+                        navigationTapped(0);
                       },
                       child: Text(
                         "Post",
