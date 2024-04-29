@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,7 +11,16 @@ class PostScreen extends StatefulWidget {
 }
 
 class _PostScreenState extends State<PostScreen> {
+  final List<Widget> _mediaList = [];
+  final List<File> path = [];
+  File? _file;
+  int currentPage = 0;
+  int? lastPage;
   @override
+  _fetchNewMedia() async {
+    lastPage = currentPage;
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
