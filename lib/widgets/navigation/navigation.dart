@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:instagramcloneapp/features/explore/page/explore_screen.dart';
 import 'package:instagramcloneapp/features/home/page/home_screen.dart';
+import 'package:instagramcloneapp/features/post/page/post_screen.dart';
 import 'package:instagramcloneapp/features/reel/page/reel_screen.dart';
 import 'package:instagramcloneapp/features/user_profile/page/user_profile_screen.dart';
+import 'package:instagramcloneapp/widgets/add_screen/add_screen.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
@@ -24,7 +26,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     pageController.dispose();
   }
@@ -53,7 +54,12 @@ class _NavigationScreenState extends State<NavigationScreen> {
                   label: "Search"),
               BottomNavigationBarItem(
                   icon: Icon(
-                    Icons.camera_enhance,
+                    Icons.camera,
+                  ),
+                  label: "Post"),
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.camera_alt_outlined,
                   ),
                   label: "Reels"),
               BottomNavigationBarItem(
@@ -69,6 +75,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
         children: const [
           HomeScreen(),
           ExploreScreen(),
+          PostScreenNavigation(),
           ReelScreen(),
           ProfileScreen()
         ],
